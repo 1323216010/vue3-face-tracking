@@ -1,13 +1,7 @@
 <script setup>
 import * as THREE from 'https://unpkg.com/three@0.147.0/build/three.module.js';
 import { MindARThree } from 'https://cdn.jsdelivr.net/npm/mind-ar@1.2.0/dist/mindar-face-three.prod.js';
-import { ref, onMounted } from 'vue';
-
-defineProps({
-  msg: String,
-});
-
-const count = ref(0);
+import { onMounted } from 'vue';
 
 onMounted(() => {
   const mindarThree = new MindARThree({
@@ -39,13 +33,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div style="text-align: center">
-    <div
+  <p style="text-align: center">
+    <a
       id="container"
-      style="width: 70%; height: 45%; display: inline-block"
-    ></div>
-  </div>
-  <h1>{{ msg }}</h1>
+      style="width:70%;height: 95%;display:inline-block;"
+    ></a>
+  </p>
 </template>
 
 <style scoped></style>
