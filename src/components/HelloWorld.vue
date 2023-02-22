@@ -4,6 +4,8 @@ import { MindARThree } from 'https://cdn.jsdelivr.net/npm/mind-ar@1.2.0/dist/min
 import { onMounted } from 'vue';
 
 onMounted(() => {
+});
+function f(path) {
   const mindarThree = new MindARThree({
     container: document.querySelector('#container'),
   });
@@ -14,10 +16,7 @@ onMounted(() => {
 
   const faceMesh = mindarThree.addFaceMesh();
 
-  function f1() {
-    const texture = new THREE.TextureLoader().load(
-      '/p1'
-    );
+  const texture = new THREE.TextureLoader().load(path);
     faceMesh.material.map = texture;
     faceMesh.material.transparent = true;
     faceMesh.material.needsUpdate = true;
@@ -30,9 +29,7 @@ onMounted(() => {
       });
     };
     start();
-  }
-
-});
+}
 </script>
 
 <template>
@@ -40,10 +37,10 @@ onMounted(() => {
     <div id="container" style="width:70%;height: 95%;display:inline-block;"></div>
 
     <p style="text-align:center">
-      <button click="f1()">图案一</button>
-      <button>图案二</button>
-      <button>图案三</button>
-      <button>图案四</button>
+      <button click="f('/p1')">图案一</button>
+      <button click="f('/p2')">图案二</button>
+      <button click="f('/p3')">图案三</button>
+      <button click="f('/p4')">图案四</button>
       <!-- <a onclick="f()">55555555555555</a> -->
     </p>
   </div>
