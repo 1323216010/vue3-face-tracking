@@ -1,11 +1,14 @@
 <script setup>
 import * as THREE from 'https://unpkg.com/three@0.147.0/build/three.module.js';
 import { MindARThree } from 'https://cdn.jsdelivr.net/npm/mind-ar@1.2.0/dist/mindar-face-three.prod.js';
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 
 onMounted(() => {
 });
+const status = ref(true)
 function f(path) {
+  status.value = false
+  status.value = true
   const mindarThree = new MindARThree({
     container: document.querySelector('#container'),
   });
@@ -41,7 +44,7 @@ function f(path) {
       <button @click="f('/p3')">图案三</button>
       <button @click="f('/p4')">图案四</button>
     </div>
-    <div id="container"></div>
+    <div id="container" v-if="status"></div>
   </div>
 </template>
 
