@@ -34,6 +34,7 @@ function f(path) {
 
 <template>
   <div style="text-align: center">
+    <a>手机在QQ浏览器测试</a>
     <div>
       <button @click="f('/p1')">图案一</button>
       <button @click="f('/p2')">图案二</button>
