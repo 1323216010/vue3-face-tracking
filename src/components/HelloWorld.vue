@@ -14,31 +14,39 @@ onMounted(() => {
 
   const faceMesh = mindarThree.addFaceMesh();
 
-  const texture = new THREE.TextureLoader().load(
-    '/p1'
-  );
-  faceMesh.material.map = texture;
-  faceMesh.material.transparent = true;
-  faceMesh.material.needsUpdate = true;
-  scene.add(faceMesh);
+  function f1() {
+    const texture = new THREE.TextureLoader().load(
+      '/p1'
+    );
+    faceMesh.material.map = texture;
+    faceMesh.material.transparent = true;
+    faceMesh.material.needsUpdate = true;
+    scene.add(faceMesh);
 
-  const start = async () => {
-    await mindarThree.start();
-    renderer.setAnimationLoop(() => {
-      renderer.render(scene, camera);
-    });
-  };
-  start();
+    const start = async () => {
+      await mindarThree.start();
+      renderer.setAnimationLoop(() => {
+        renderer.render(scene, camera);
+      });
+    };
+    start();
+  }
+
 });
 </script>
 
 <template>
-  <p style="text-align: center">
-    <a
-      id="container"
-      style="width:70%;height: 95%;display:inline-block;"
-    ></a>
-  </p>
+  <div style="text-align: center">
+    <div id="container" style="width:70%;height: 95%;display:inline-block;"></div>
+
+    <p style="text-align:center">
+      <button click="f1()">图案一</button>
+      <button>图案二</button>
+      <button>图案三</button>
+      <button>图案四</button>
+      <!-- <a onclick="f()">55555555555555</a> -->
+    </p>
+  </div>
 </template>
 
 <style scoped></style>
