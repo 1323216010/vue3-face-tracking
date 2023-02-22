@@ -5,14 +5,11 @@ import { ref, onMounted } from 'vue';
 
 onMounted(() => {
 });
-var mindarThree;
 function f(path) {
-  if(!mindarThree) {
-    mindarThree = new MindARThree({
+  const mindarThree = new MindARThree({
     container: document.querySelector('#container'),
   });
-  var { renderer, scene, camera } = mindarThree;
-  }
+  const { renderer, scene, camera } = mindarThree;
 
   const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
   scene.add(light);
