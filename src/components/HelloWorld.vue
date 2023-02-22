@@ -40,11 +40,11 @@ function g() {
     <div id="container" style="width:70%;height: 95%;display:inline-block;"></div>
 
     <p style="text-align:center">
-      <button click="f('/p1')">图案一</button>
-      <button click="f('/p2')">图案二</button>
-      <button click="f('/p3')">图案三</button>
-      <button click="f('/p4')">图案四</button>
-      <button click="g()">测试</button>
+      <button @click="f('/p1')">图案一</button>
+      <button @click="f('/p2')">图案二</button>
+      <button @click="f('/p3')">图案三</button>
+      <button @click="f('/p4')">图案四</button>
+      <button @click="g()">测试</button>
       <!-- <a onclick="f()">55555555555555</a> -->
     </p>
   </div>
