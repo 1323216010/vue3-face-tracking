@@ -1,9 +1,9 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import FaceTrack from './components/FaceTrack.vue'
 </script>
 
 <template>
-  <HelloWorld msg="Vite + Vue" />
+  <FaceTrack/>
 </template>
 
 <style scoped>
