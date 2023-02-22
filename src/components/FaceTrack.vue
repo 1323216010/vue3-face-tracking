@@ -17,37 +17,42 @@ function f(path) {
   const faceMesh = mindarThree.addFaceMesh();
 
   const texture = new THREE.TextureLoader().load(path);
-    faceMesh.material.map = texture;
-    faceMesh.material.transparent = true;
-    faceMesh.material.needsUpdate = true;
-    scene.add(faceMesh);
+  faceMesh.material.map = texture;
+  faceMesh.material.transparent = true;
+  faceMesh.material.needsUpdate = true;
+  scene.add(faceMesh);
 
-    const start = async () => {
-      await mindarThree.start();
-      renderer.setAnimationLoop(() => {
-        renderer.render(scene, camera);
-      });
-    };
-    start();
-}
-function g() {
-  console.log('g函数执行。。。')
+  const start = async () => {
+    await mindarThree.start();
+    renderer.setAnimationLoop(() => {
+      renderer.render(scene, camera);
+    });
+  };
+  start();
 }
 </script>
 
 <template>
   <div style="text-align: center">
-    <div id="container" style="width:70%;height: 95%;display:inline-block;"></div>
-
-    <p style="text-align:center">
+    <div>
       <button @click="f('/p1')">图案一</button>
       <button @click="f('/p2')">图案二</button>
       <button @click="f('/p3')">图案三</button>
       <button @click="f('/p4')">图案四</button>
-      <button @click="g()">测试</button>
-      <!-- <a onclick="f()">55555555555555</a> -->
-    </p>
+    </div>
+    <div id="container"></div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+body {
+  margin: 0;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+</style>
