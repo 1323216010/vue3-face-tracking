@@ -15,7 +15,7 @@ onMounted(() => {
   const faceMesh = mindarThree.addFaceMesh();
 
   const texture = new THREE.TextureLoader().load(
-    'https://7072-prod-4gxasl3i1c9bec5c-1316782094.tcb.qcloud.la/test/p1.png?sign=b1bba8356e63698956788d4315f6d17f&t=1677056739'
+    '/p1'
   );
   faceMesh.material.map = texture;
   faceMesh.material.transparent = true;
