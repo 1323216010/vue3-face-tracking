@@ -30,6 +30,9 @@ function f(path) {
     };
     start();
 }
+function g() {
+  console.log('g函数执行。。。')
+}
 </script>
 
 <template>
@@ -41,6 +44,7 @@ function f(path) {
       <button click="f('/p2')">图案二</button>
       <button click="f('/p3')">图案三</button>
       <button click="f('/p4')">图案四</button>
+      <button click="g()">测试</button>
       <!-- <a onclick="f()">55555555555555</a> -->
     </p>
   </div>
