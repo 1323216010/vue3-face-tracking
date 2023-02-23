@@ -1,6 +1,6 @@
 <script setup>
-import * as THREE from 'https://unpkg.com/three@0.147.0/build/three.module.js';
-import { MindARThree } from 'https://cdn.jsdelivr.net/npm/mind-ar@1.2.0/dist/mindar-face-three.prod.js';
+import * as THREE from '../utils/three.module.js';
+import { MindARThree } from '../utils/mind-ar/dist/mindar-face-three.prod.js';
 import { ref, onMounted } from 'vue';
 
 onMounted(() => {
