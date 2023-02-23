@@ -22,6 +22,7 @@ function f(path) {
   const faceMesh = mindarThree.addFaceMesh();
 
   const texture = new THREE.TextureLoader().load(path);
+  texture.minFilter = THREE.LinearFilter;
   console.log(texture)
   faceMesh.material.map = texture;
   faceMesh.material.transparent = true;
