@@ -5,8 +5,12 @@ import { ref, onMounted } from 'vue';
 
 onMounted(() => {
 });
+var mindarThree
 function f(path) {
-  const mindarThree = new MindARThree({
+  if(mindarThree) {
+    mindarThree.stop();
+  }
+  mindarThree = new MindARThree({
     container: document.querySelector('#container'),
   });
   const { renderer, scene, camera } = mindarThree;
