@@ -53,6 +53,7 @@ function look() {
       <button class="btn btn-primary" @click="look()">打开控制台</button>
     </div>
     <div id="container"></div>
+    <img src="https://7072-prod-4gxasl3i1c9bec5c-1316782094.tcb.qcloud.la/test/p3.png?sign=2c29296b6f3fe3bbf7629bf44b2c4136&t=1677136666"/>
   </div>
 </template>
 
