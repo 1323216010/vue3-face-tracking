@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "eruda": "^2.11.2",
     "mind-ar": "^1.2.0",
     "vue": "^3.2.45"
   },

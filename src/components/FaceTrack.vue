@@ -2,6 +2,7 @@
 import * as THREE from '../utils/three.module.js';
 import { MindARThree } from '../utils/mind-ar/dist/mindar-face-three.prod.js';
 import { ref, onMounted } from 'vue';
+import eruda from 'eruda'
 
 onMounted(() => {
 });
@@ -34,6 +35,9 @@ function f(path) {
   };
   start();
 }
+function look() {
+  eruda.init();
+}
 </script>
 
 <template>
@@ -44,6 +48,8 @@ function f(path) {
       <button class="btn btn-primary" @click="f('/p2')">图案二</button>&thinsp;
       <button class="btn btn-primary" @click="f('/p3')">图案三</button>&thinsp;
       <button class="btn btn-primary" @click="f('/p4')">图案四</button>
+      <br>
+      <button class="btn btn-primary" @click="look()">打开控制台</button>
     </div>
     <div id="container"></div>
   </div>
