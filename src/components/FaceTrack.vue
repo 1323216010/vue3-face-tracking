@@ -1,6 +1,6 @@
 <script setup>
 import * as THREE from '../utils/three.module.js';
-import { MindARThree } from '../utils/mind-ar/mindar-face-three.prod.js';
+import { MindARThree } from '../utils/ar/three.js';
 import { ref, onMounted } from 'vue';
 import eruda from 'eruda'
 
