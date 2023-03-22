@@ -42,6 +42,7 @@ eruda.init();
 <template>
   <div style="text-align: center">
     <a>目前只能在指定浏览器体验</a>
+    <br>
     <a>安卓为自带浏览器或QQ浏览器，苹果为自带浏览器，Windows为谷歌浏览器</a>
     <div>
       <button class="btn btn-primary" @click="f('/p1')">图案一</button>&thinsp;
