@@ -51,7 +51,7 @@ eruda.init();
       <button class="btn btn-primary" @click="f('/p4')">图案四</button>
     </div>
     <div id="container" v-show="open"></div>
-
+    <br>
     <a>目前只能在指定浏览器体验</a>
     <br>
     <a>安卓为自带浏览器或QQ浏览器，苹果为自带浏览器，Windows为谷歌浏览器</a>
