@@ -4,10 +4,13 @@ import { MindARThree } from '../utils/ar/three.js';
 import { ref, onMounted } from 'vue';
 import eruda from 'eruda'
 
+const open = ref(false)
+
 onMounted(() => {
 });
 var mindarThree
 function f(path) {
+  open.value = true
   if(mindarThree) {
     mindarThree.stop();
   }
@@ -47,7 +50,7 @@ eruda.init();
       <button class="btn btn-primary" @click="f('/p3')">图案三</button>&thinsp;
       <button class="btn btn-primary" @click="f('/p4')">图案四</button>
     </div>
-    <div id="container"></div>
+    <div id="container" v-show="open"></div>
 
     <a>目前只能在指定浏览器体验</a>
     <br>
