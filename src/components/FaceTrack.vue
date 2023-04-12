@@ -48,7 +48,7 @@ eruda.init();
       <button class="btn btn-primary" @click="f('/p1')">真实口罩</button>&thinsp;
       <button class="btn btn-primary" @click="f('/p2')">卡通口罩</button>&thinsp;
       <button class="btn btn-primary" @click="f('/p3')">条纹口罩</button>&thinsp;
-      <button class="btn btn-primary" @click="f('/p4')">蓝色口罩</button>
+      <button class="btn btn-primary" @click="f('/p4')">天蓝口罩</button>
     </div>
     <div id="container" v-show="open"></div>
     <!-- <br>
