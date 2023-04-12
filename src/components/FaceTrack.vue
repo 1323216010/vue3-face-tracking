@@ -45,16 +45,16 @@ eruda.init();
 <template>
   <div style="text-align: center">
     <div>
-      <button class="btn btn-primary" @click="f('/p1')">图案一</button>&thinsp;
-      <button class="btn btn-primary" @click="f('/p2')">图案二</button>&thinsp;
-      <button class="btn btn-primary" @click="f('/p3')">图案三</button>&thinsp;
-      <button class="btn btn-primary" @click="f('/p4')">图案四</button>
+      <button class="btn btn-primary" @click="f('/p1')">真实口罩</button>&thinsp;
+      <button class="btn btn-primary" @click="f('/p2')">卡通口罩</button>&thinsp;
+      <button class="btn btn-primary" @click="f('/p3')">条纹口罩</button>&thinsp;
+      <button class="btn btn-primary" @click="f('/p4')">蓝色口罩</button>
     </div>
     <div id="container" v-show="open"></div>
-    <br>
+    <!-- <br>
     <a>目前只能在指定浏览器体验</a>
     <br>
-    <a>安卓为自带浏览器或QQ浏览器，苹果为自带浏览器，Windows为谷歌浏览器</a>
+    <a>安卓为自带浏览器或QQ浏览器，苹果为自带浏览器，Windows为谷歌浏览器</a> -->
   </div>
 </template>
 
